@@ -1,10 +1,10 @@
 ### Site metadata ###
 
-site_name: aws Reference
-site_description: 'aws tutorial with examples'
+site_name: Reading Reference
+site_description: 'tutorials with examples'
 site_url: https://rmechi.github.io
 
-repo_url: https://github.com/rmechi/aws
+repo_url: https://github.com/rmechi/notes
 edit_uri: edit/master/docs/docs
 
 theme:
