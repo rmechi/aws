@@ -103,3 +103,11 @@ nav:
       - Arrays: aws/arrays.md
       - Slices: aws/slices.md
       - GoMaps: aws/maps.md
+  - Terraform:
+      - Arrays: terraform/arrays.md
+      - Slices: terraform/slices.md
+      - GoMaps: terraform/maps.md
+  - Python:
+      - Arrays: python/arrays.md
+      - Slices: python/slices.md
+      - GoMaps: python/maps.md
