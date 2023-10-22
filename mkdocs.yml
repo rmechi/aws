@@ -99,7 +99,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Tutorial:
+  - AWS:
       - Arrays: aws/arrays.md
       - Slices: aws/slices.md
       - GoMaps: aws/maps.md
