@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://rmechi.github.io/index.html</loc>
+         <loc>https://rmechi.github.io/</loc>
          <lastmod>2023-10-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://rmechi.github.io/aws/arrays.html</loc>
+         <loc>https://rmechi.github.io/aws/arrays/</loc>
          <lastmod>2023-10-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://rmechi.github.io/aws/datatypes.html</loc>
+         <loc>https://rmechi.github.io/aws/datatypes/</loc>
          <lastmod>2023-10-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://rmechi.github.io/aws/maps.html</loc>
+         <loc>https://rmechi.github.io/aws/maps/</loc>
          <lastmod>2023-10-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://rmechi.github.io/aws/slices.html</loc>
+         <loc>https://rmechi.github.io/aws/slices/</loc>
          <lastmod>2023-10-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
