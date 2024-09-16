@@ -345,19 +345,25 @@
 <p>Reference: https://konem.blog/2021/01/17/how-to-structure-your-application-architecture-using-aws-cdk/</p>
 <h3 id="aws-cdk-python-anatomy">AWS CDK Python Anatomy<a class="headerlink" href="#aws-cdk-python-anatomy" title="Anchor link to this section for reference">¶</a></h3>
 <ol>
-<li>Project Structure
-A typical AWS CDK project in Python includes the following files and directories:</li>
-</ol>
-<p>app.py: The entry point of your CDK application. It defines the stacks to be deployed.
-requirements.txt: Lists the Python dependencies for your project.
-cdk.json: Configuration file for the CDK CLI.
-stacks/: Directory containing stack definitions.</p>
-<ol>
 <li>
-<p>Core Components
-App: The root of the CDK application. It contains one or more stacks.
-Stack: Represents a single unit of deployment. Each stack is a collection of AWS resources.
-Constructs: The basic building blocks of CDK applications. Constructs can represent a single resource or a higher-level abstraction.</p>
+<p>Project Structure
+A typical AWS CDK project in Python includes the following files and directories:</p>
+</li>
+<li>
+<p>app.py: The entry point of your CDK application. It defines the stacks to be deployed.</p>
+</li>
+<li>requirements.txt: Lists the Python dependencies for your project.</li>
+<li>cdk.json: Configuration file for the CDK CLI.</li>
+<li>
+<p>stacks/: Directory containing stack definitions.</p>
+</li>
+<li>
+<p>Core Components</p>
+</li>
+<li>App: The root of the CDK application. It contains one or more stacks.</li>
+<li>Stack: Represents a single unit of deployment. Each stack is a collection of AWS resources.</li>
+<li>
+<p>Constructs: The basic building blocks of CDK applications. Constructs can represent a single resource or a higher-level abstraction.</p>
 </li>
 <li>
 <p>Defining a Stack
