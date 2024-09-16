@@ -2,67 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://rmechi.github.io/</loc>
-         <lastmod>2023-10-22</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rmechi.github.io/aws/arrays/</loc>
-         <lastmod>2023-10-22</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rmechi.github.io/aws/datatypes/</loc>
-         <lastmod>2023-10-22</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rmechi.github.io/aws/maps/</loc>
-         <lastmod>2023-10-22</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rmechi.github.io/aws/slices/</loc>
-         <lastmod>2023-10-22</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rmechi.github.io/python/arrays/</loc>
-         <lastmod>2023-10-22</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rmechi.github.io/python/datatypes/</loc>
-         <lastmod>2023-10-22</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rmechi.github.io/python/maps/</loc>
-         <lastmod>2023-10-22</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rmechi.github.io/python/slices/</loc>
-         <lastmod>2023-10-22</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rmechi.github.io/terraform/arrays/</loc>
-         <lastmod>2023-10-22</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rmechi.github.io/terraform/datatypes/</loc>
-         <lastmod>2023-10-22</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rmechi.github.io/terraform/maps/</loc>
-         <lastmod>2023-10-22</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rmechi.github.io/terraform/slices/</loc>
-         <lastmod>2023-10-22</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
