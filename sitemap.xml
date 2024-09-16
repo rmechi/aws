@@ -11,17 +11,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://rmechi.github.io/aws/datatypes/</loc>
-         <lastmod>2024-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://rmechi.github.io/aws/maps/</loc>
-         <lastmod>2024-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://rmechi.github.io/aws/slices/</loc>
+         <loc>https://rmechi.github.io/aws/cdk/</loc>
          <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>

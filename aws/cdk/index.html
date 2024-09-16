@@ -6,10 +6,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="tutorials with examples" name="description"/>
-<link href="https://rmechi.github.io/aws/datatypes/" rel="canonical"/>
+<link href="https://rmechi.github.io/aws/cdk/" rel="canonical"/>
+<link href="../.." rel="prev"/>
+<link href="../../terraform/arrays/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.1.17" name="generator"/>
-<title>Datatypes - Reading Reference</title>
+<title>Arrays - Reading Reference</title>
 <link href="../../assets/stylesheets/main.26e3688c.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ecc896b0.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -34,6 +36,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#cdk-aspects-and-the-synthesis-process">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 <aside class="md-banner">
@@ -64,7 +69,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Datatypes
+              Arrays
             
           </span>
 </div>
@@ -136,7 +141,7 @@
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../arrays/">
+<a class="md-tabs__link md-tabs__link--active" href="./">
         AWS
       </a>
 </li>
@@ -181,32 +186,47 @@
         Home
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
           AWS
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
           AWS
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../arrays/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Arrays
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Arrays
       </a>
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cdk-aspects-and-the-synthesis-process">
+      CDK Aspects and the Synthesis Process:
+    </a>
+<!-- Table of contents list -->
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../slices/">
-        Slices
-      </a>
+<a class="md-nav__link" href="#cdk-construct-levels">
+      CDK Construct Levels:
+    </a>
+<!-- Table of contents list -->
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../maps/">
-        GoMaps
-      </a>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -280,59 +300,37 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cdk-aspects-and-the-synthesis-process">
+      CDK Aspects and the Synthesis Process:
+    </a>
+<!-- Table of contents list -->
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cdk-construct-levels">
+      CDK Construct Levels:
+    </a>
+<!-- Table of contents list -->
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Datatypes</h1>
-<p>Data types specify the type of data that a valid Go variable can hold</p>
-<ul>
-<li>Basic Types</li>
-<li>Integers (Signed and UnSigned)</li>
-<li>Floats</li>
-<li>Complex Numbers</li>
-<li>Byte</li>
-<li>Rune</li>
-<li>String</li>
-<li>Booleans</li>
-<li>Composite ( Unnamed ) Types<blockquote>
-<p>In computer science, a composite data type is any data type which can be constructed in a program using its programming language's primitive data types and other composite types.  Composite types are known as “unnamed types”, because they use a type literal to represent the structural definition of the type, instead of using a simple name identifier</p>
-</blockquote>
-</li>
-<li>Non-Reference Types<ul>
-<li>Arrays</li>
-<li>Structs </li>
-</ul>
-</li>
-<li>Reference Types ( Non-primitive )<ul>
-<li>Slices</li>
-<li>Channels</li>
-<li>Maps</li>
-<li>Pointers</li>
-<li>Functions</li>
-</ul>
-</li>
-<li>Interface<ul>
-<li>Special case of empty interface</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p><strong>A primitive data type</strong> type that hold simple values. A primitive type has always a value, while non-primitive types can be null.  In golang, we have string, numeric type ( integer, float and complex ), bool, and error type.  variable contains the value </p>
-<p><strong>Non-primitive data types</strong> Non-Primitive data types refer to objects and hence they are called reference types. variable contains address of the value </p>
-</blockquote>
-<p>Default values:
-- String: ""
-- integer, byte, rune is 0
-- Float  0
-- complex 0+0i
-- Booleans False
-- Pointers ( var num *int - fmt.Println(num) ) is nil
-- structs { "", 0 }
-- slices nil
-- map in Go is nil</p>
+<h1>Arrays</h1>
+<h5 id="cdk-aspects-and-the-synthesis-process">CDK Aspects and the Synthesis Process:<a class="headerlink" href="#cdk-aspects-and-the-synthesis-process" title="Anchor link to this section for reference">¶</a></h5>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/cdkflow.png"><img alt="image info" src="../images/cdkflow.png"/></a></p>
+<p>Reference: https://matt.martz.codes/breaking-bad-practices-with-cdk-aspects</p>
+<h5 id="cdk-construct-levels">CDK Construct Levels:<a class="headerlink" href="#cdk-construct-levels" title="Anchor link to this section for reference">¶</a></h5>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/constricts.png"><img alt="image info" src="../images/constricts.png"/></a></p>
+<p>Reference: https://konem.blog/2021/01/17/how-to-structure-your-application-architecture-using-aws-cdk/</p>
 </article>
 </div>
 </div>
@@ -342,6 +340,34 @@
           </button>
 </main>
 <footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Home" class="md-footer__link md-footer__link--prev" href="../.." rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Home
+              </div>
+</div>
+</a>
+<a aria-label="Next: Arrays" class="md-footer__link md-footer__link--next" href="../../terraform/arrays/" rel="next">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Arrays
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
