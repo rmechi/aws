@@ -100,9 +100,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - AWS:
-      - Arrays: aws/arrays.md
-      - Slices: aws/slices.md
-      - GoMaps: aws/maps.md
+      - Arrays: aws/cdk.md
   - Terraform:
       - Arrays: terraform/arrays.md
       - Slices: terraform/slices.md
