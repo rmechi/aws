@@ -100,7 +100,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - AWS:
-      - Arrays: aws/cdk.md
+      - CDK Python: aws/cdk.md
   - Terraform:
       - Arrays: terraform/arrays.md
       - Slices: terraform/slices.md
