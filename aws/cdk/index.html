@@ -225,6 +225,12 @@
     </a>
 <!-- Table of contents list -->
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aws-cdk-python-anatomy">
+      AWS CDK Python Anatomy
+    </a>
+<!-- Table of contents list -->
+</li>
 </ul>
 </nav>
 </li>
@@ -317,6 +323,12 @@
     </a>
 <!-- Table of contents list -->
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aws-cdk-python-anatomy">
+      AWS CDK Python Anatomy
+    </a>
+<!-- Table of contents list -->
+</li>
 </ul>
 </nav>
 </div>
@@ -331,6 +343,87 @@
 <h5 id="cdk-construct-levels">CDK Construct Levels:<a class="headerlink" href="#cdk-construct-levels" title="Anchor link to this section for reference">¶</a></h5>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/constricts.png"><img alt="image info" src="../images/constricts.png"/></a></p>
 <p>Reference: https://konem.blog/2021/01/17/how-to-structure-your-application-architecture-using-aws-cdk/</p>
+<h3 id="aws-cdk-python-anatomy">AWS CDK Python Anatomy<a class="headerlink" href="#aws-cdk-python-anatomy" title="Anchor link to this section for reference">¶</a></h3>
+<ol>
+<li>Project Structure
+A typical AWS CDK project in Python includes the following files and directories:</li>
+</ol>
+<p>app.py: The entry point of your CDK application. It defines the stacks to be deployed.
+requirements.txt: Lists the Python dependencies for your project.
+cdk.json: Configuration file for the CDK CLI.
+stacks/: Directory containing stack definitions.</p>
+<ol>
+<li>
+<p>Core Components
+App: The root of the CDK application. It contains one or more stacks.
+Stack: Represents a single unit of deployment. Each stack is a collection of AWS resources.
+Constructs: The basic building blocks of CDK applications. Constructs can represent a single resource or a higher-level abstraction.</p>
+</li>
+<li>
+<p>Defining a Stack
+Here’s an example of defining a simple stack in Python:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">aws_cdk</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">aws_s3</span> <span class="k">as</span> <span class="n">s3</span><span class="p">,</span>
+    <span class="n">core</span>
+<span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">MyStack</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">Stack</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scope</span><span class="p">:</span> <span class="n">core</span><span class="o">.</span><span class="n">Construct</span><span class="p">,</span> <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">scope</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="c1"># Define an S3 bucket</span>
+        <span class="n">bucket</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">"MyBucket"</span><span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">App</span><span class="p">()</span>
+<span class="n">MyStack</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="s2">"MyStack"</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">synth</span><span class="p">()</span>
+</code></pre></div>
+<ol>
+<li>Using Aspects
+Aspects allow you to apply operations to all constructs in a given scope. For example, you can use aspects to enforce naming conventions or apply security policies.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">aws_cdk</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">aws_iam</span> <span class="k">as</span> <span class="n">iam</span><span class="p">,</span>
+    <span class="n">core</span><span class="p">,</span>
+    <span class="n">Aspects</span><span class="p">,</span>
+    <span class="n">IAspect</span>
+<span class="p">)</span>
+<span class="kn">import</span> <span class="nn">jsii</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+
+<span class="nd">@jsii</span><span class="o">.</span><span class="n">implements</span><span class="p">(</span><span class="n">IAspect</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">RoleNameAspect</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">visit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">core</span><span class="o">.</span><span class="n">IConstruct</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">iam</span><span class="o">.</span><span class="n">CfnRole</span><span class="p">):</span>
+            <span class="n">unique_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())[:</span><span class="mi">8</span><span class="p">]</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">add_property_override</span><span class="p">(</span><span class="s2">"RoleName"</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"delegate-test-</span><span class="si">{</span><span class="n">unique_id</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">MyStack</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">Stack</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scope</span><span class="p">:</span> <span class="n">core</span><span class="o">.</span><span class="n">Construct</span><span class="p">,</span> <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">scope</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="c1"># Create an IAM role without specifying the name</span>
+        <span class="n">role</span> <span class="o">=</span> <span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">"MyRole"</span><span class="p">,</span>
+                        <span class="n">assumed_by</span><span class="o">=</span><span class="n">iam</span><span class="o">.</span><span class="n">ServicePrincipal</span><span class="p">(</span><span class="s2">"lambda.amazonaws.com"</span><span class="p">))</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">App</span><span class="p">()</span>
+<span class="n">stack</span> <span class="o">=</span> <span class="n">MyStack</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="s2">"MyStack"</span><span class="p">)</span>
+
+<span class="c1"># Apply the aspect to the entire app</span>
+<span class="n">Aspects</span><span class="o">.</span><span class="n">of</span><span class="p">(</span><span class="n">app</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">RoleNameAspect</span><span class="p">())</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">synth</span><span class="p">()</span>
+</code></pre></div>
+<ol>
+<li>Deployment
+To deploy your CDK application, use the CDK CLI:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>cdk<span class="w"> </span>deploy
+</code></pre></div>
 </article>
 </div>
 </div>
