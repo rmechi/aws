@@ -6,11 +6,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://rmechi.github.io/aws/arrays/</loc>
-         <lastmod>2024-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://rmechi.github.io/aws/cdk/</loc>
          <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
