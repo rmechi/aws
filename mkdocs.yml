@@ -106,6 +106,6 @@ nav:
       - Slices: terraform/slices.md
       - GoMaps: terraform/maps.md
   - Python:
-      - Arrays: python/arrays.md
+      - OOP: python/oop.md
       - Slices: python/slices.md
       - GoMaps: python/maps.md
